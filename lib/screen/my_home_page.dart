@@ -18,7 +18,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Hello, Flutter!'),
+            const Text('Hello, First Page!'),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(

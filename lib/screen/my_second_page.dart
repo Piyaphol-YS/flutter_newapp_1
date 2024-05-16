@@ -5,12 +5,23 @@ class MySecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Column(
-        children: [
-          Text('Second Page'),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Piyaphol App'),
+        backgroundColor: Colors.green,
       ),
+      body: Center(
+          child: Column(
+        children: [
+          const Text('Hello, Second Page!'),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('กลับหน้าหลัก'),
+          )
+        ],
+      )),
     );
   }
 }
