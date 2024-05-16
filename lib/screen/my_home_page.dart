@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_newapp_1/screen/my_second_page.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -13,10 +14,20 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Piyaphol App'),
         backgroundColor: Colors.green,
       ),
-      body: const Center(
-        child: Text(
-          'Hello',
-          style: TextStyle(fontSize: 50, color: Colors.amber),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Hello, Flutter!'),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const MySecondPage()),
+                );
+              },
+              child: const Text('ไปยังหน้าสอง'),
+            ),
+          ],
         ),
       ),
     );
